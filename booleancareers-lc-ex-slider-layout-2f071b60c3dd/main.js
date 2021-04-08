@@ -16,6 +16,21 @@ btnL.click(function(){
    console.log('sinistra');
 });
 
-
-
 });
+/*FUNZIONI*/
+
+/*Navigazione Slide*/
+
+function leftRightSlide(direction) {
+    console.log(direction);
+    var imageActive = $('.images img.active');
+
+    //remove active
+    imageActive.removeClass('active');
+
+    if(direction === 'next') {
+        imageActive.next('img').addClass('active');
+    }
+
+}
+
