@@ -7,29 +7,39 @@ var btnL = $('.prev');
 
 //navigazione con muose a destra
 
-btnR.click(function() {
-     console.log('destra');
-});
+  btnR.click(function() {
+    nextPrevSlide('next');
+  });
 //navigazione con muose a sinistra
 
-btnL.click(function(){
-   console.log('sinistra');
-});
+  btnL.click(function(){
+    nextPrevSlide('prev');
+  });
 
 });
+
 /*FUNZIONI*/
 
 /*Navigazione Slide*/
 
-function leftRightSlide(direction) {
+function nextPrevSlide(direction) {
     console.log(direction);
-    var imageActive = $('.images img.active');
+    var activeImage = $('.images img.active');
+    var activeCircle = $('.nav i.active');
 
     //remove active
-    imageActive.removeClass('active');
+   activeImage.removeClass('active');
+    activeCircle.removeClass('active');
 
     if(direction === 'next') {
-        imageActive.next('img').addClass('active');
+       if(activeImage.hasClass('last')){
+          $('.image img.first').addClass('active');
+          $('nav i.first').addClass('active');
+        }
+
+
+        activeImage.next('img').addClass('active');
+        activeCircle.next('i').addClass('active');
     }
 
 }
