@@ -16,6 +16,10 @@ var btnL = $('.prev');
     nextPrevSlide('prev');
   });
 
+  //Navigazione da Tastiera
+
+
+  
 });
 
 /*FUNZIONI*/
@@ -56,4 +60,3 @@ function nextPrevSlide(direction) {
         }
     }
 }
-
