@@ -18,7 +18,7 @@ var btnL = $('.prev');
 
   //Navigazione da Tastiera
 
- $(document).keydown(function(e){
+/* $(document).keydown(function(e){
      console.log(e);
      console.log(e.keyCode);
 
@@ -28,7 +28,7 @@ var btnL = $('.prev');
          nextPrevSlide('next');
      
     
-    }
+    }*/
 });
 
 /*FUNZIONI*/
